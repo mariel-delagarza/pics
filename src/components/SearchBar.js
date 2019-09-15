@@ -5,9 +5,7 @@ class SearchBar extends React.Component {
   // convention for naming: on - element - event 
   // the name of the callback doesn't matter, but 
   // it is good to name for clarity
-  onInputChange(event) {
-    console.log(event.target.value);
-  }
+  state = { term: '' };
 
   // note: do not use () when using a callback function like onInputChange
   render() {
@@ -16,7 +14,10 @@ class SearchBar extends React.Component {
         <form className="ui form">
           <div className="field">
             <label>Image Search</label>
-            <input type="text" onChange={this.onInputChange} />
+            <input 
+              type="text" 
+              value={this.state.term}
+              onChange={(e) => this.setState({ term: e.target.value })} />
           </div>
         </form>
       </div>
