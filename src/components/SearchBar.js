@@ -6,6 +6,7 @@ class SearchBar extends React.Component {
 
   }
 
+  // note: do not use () when using a callback function like onInputChange
   render() {
     return (
       <div className="ui segment">
