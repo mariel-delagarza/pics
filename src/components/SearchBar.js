@@ -2,8 +2,8 @@ import React from 'react';
 
 class SearchBar extends React.Component {
 
-  onInputChange() {
-
+  onInputChange(event) {
+    console.log(event.target.value);
   }
 
   // note: do not use () when using a callback function like onInputChange
