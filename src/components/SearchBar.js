@@ -2,6 +2,9 @@ import React from 'react';
 
 class SearchBar extends React.Component {
 
+  // convention for naming: on - element - event 
+  // the name of the callback doesn't matter, but 
+  // it is good to name for clarity
   onInputChange(event) {
     console.log(event.target.value);
   }
