@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
     event.preventDefault();
 
     this.props.onSubmit(this.state.term);
-  }
+  };
   
   // note: do not use () when using a callback function like onInputChange
   render() {
