@@ -7,11 +7,15 @@ class SearchBar extends React.Component {
   // it is good to name for clarity
   state = { term: '' };
 
+  onFormsubmit(event) {
+    event.preventDefault();
+  }
+  
   // note: do not use () when using a callback function like onInputChange
   render() {
     return (
       <div className="ui segment">
-        <form className="ui form">
+        <form onSubmit={this.onFormsubmit} className="ui form">
           <div className="field">
             <label>Image Search</label>
             <input 
