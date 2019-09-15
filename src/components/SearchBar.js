@@ -7,6 +7,7 @@ class SearchBar extends React.Component {
   // it is good to name for clarity
   state = { term: '' };
 
+  // prevent form from submitting itself
   onFormsubmit(event) {
     event.preventDefault();
   }
