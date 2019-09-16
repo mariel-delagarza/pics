@@ -1,9 +1,9 @@
 import React from 'react';
-import { tsPropertySignature } from '@babel/types';
+
 
 const ImageList = (props) => {
-  const images = props.images.map((image) => {
-    return <img key={image.id} src={image.urls.regular} />
+  const images = props.images.map(({description, id, urls}) => {
+    return <img alt={description} key={id} src={urls.regular} />
   });
 
   return <div>{images}</div>;
